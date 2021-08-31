@@ -15,6 +15,7 @@ export const handler: ServerlessFunctionSignature<{}, Event> = (
   event: Event,
   callback: ServerlessCallback,
 ) => {
+  console.log(event)
   const response = new Twilio.twiml.MessagingResponse();
   response.message(`Welcome **${event.ProfileName ?? 'Anonymus'}** !`);
 
